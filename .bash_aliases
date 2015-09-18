@@ -30,3 +30,7 @@ alias home='cd ~'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+
+alias logout='gnome-session-quit'
+alias hibernate='/home/lleifsson/scripts/hibernate.sh'
+alias suspend='/home/lleifsson/scripts/suspend.sh'
