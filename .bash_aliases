@@ -19,6 +19,7 @@ alias rm='rm -i'
 alias la='ls -alh'
 alias clr='clear'
 alias py='python'
+alias py3='python3'
 
 alias documents='cd ~/Documents'
 alias downloads='cd ~/Downloads'

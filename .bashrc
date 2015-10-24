@@ -116,4 +116,7 @@ fi
 # environment variables
 export PYTHONDONTWRITEBYTECODE=1
 
+# Java glassfish for work
+export PATH=/opt/glassfish41/current/bin:$PATH
+
 [[ $- = *i* ]] && bind TAB:menu-complete
