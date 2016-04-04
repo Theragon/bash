@@ -16,7 +16,7 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
+HISTSIZE=-1
 HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
@@ -76,8 +76,8 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -115,8 +115,5 @@ fi
 
 # environment variables
 export PYTHONDONTWRITEBYTECODE=1
-
-# Java glassfish for work
-export PATH=/opt/glassfish41/current/bin:$PATH
 
 [[ $- = *i* ]] && bind TAB:menu-complete
