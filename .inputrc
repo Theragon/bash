@@ -50,6 +50,7 @@ $if mode=emacs
 "\e\e[D": backward-word
 
 $if term=rxvt
+"\e[7~": beginning-of-line
 "\e[8~": end-of-line
 "\eOc": forward-word
 "\eOd": backward-word
@@ -64,4 +65,11 @@ $endif
 # "\e[F": end-of-line
 
 $endif
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
+
+# enable case-insensitive tab completion
 set completion-ignore-case on
