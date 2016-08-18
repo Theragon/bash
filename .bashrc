@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=-1
+HISTFILESIZE=-1
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -79,9 +79,9 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    alias grep='grep -i --color=auto'
+    alias fgrep='fgrep -i --color=auto'
+    alias egrep='egrep -i --color=auto'
 fi
 
 # some more ls aliases
@@ -115,8 +115,9 @@ fi
 
 # environment variables
 export PYTHONDONTWRITEBYTECODE=1
-
-# Java glassfish for work
-export PATH=/opt/glassfish41/current/bin:$PATH
+export ANDROID_HOME=~/android-sdk-linux
+export PATH=$PATH:~/scripts
+export PATH=$PATH:~/android-sdk-linux/tools
+export PATH=$PATH:~/android-sdk-linux/platform-tools
 
 [[ $- = *i* ]] && bind TAB:menu-complete
