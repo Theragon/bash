@@ -22,7 +22,9 @@ gitcommit() {
 }
 alias gitc=gitcommit
 alias gitd='git diff'
+alias git-diff='git diff'
 alias gitp='git push'
+alias gitr='git fetch --all'
 
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -33,8 +35,11 @@ alias py='python'
 alias py3='python3'
 
 alias rn='react-native'
+# run react native project on android
 alias rn-ra='react-native run-android'
-alias rn-start='react-native start'
+# start react native packager in background
+alias rn-start='react-native start > /dev/null 2>&1 &'
+# create a new react native project
 alias rn-init='react-native init'
 
 alias adb-devices='adb devices'
@@ -59,8 +64,12 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+alias xclip='xclip -selection c'
+#alias openvt='open'
+alias open='xdg-open'
+
 alias logout='gnome-session-quit'
 alias hibernate="/home/$(whoami)/scripts/hibernate.sh"
 alias suspend="/home/$(whoami)/scripts/suspend.sh"
 
-alias android_emulator="/home/$(whoami)/android-sdk-linux/tools/emulator @nexus"
+alias android_emulator="/home/$(whoami)/android-sdk-linux/tools/emulator @nexus5"
